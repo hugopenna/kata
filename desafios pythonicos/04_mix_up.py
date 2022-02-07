@@ -13,8 +13,8 @@ Assuma que a e b tem tamanho 2 ou maior.
 """
 
 def mix_up(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+    stra = b[:2] + a[2:] + ' ' + a[:2] + b[2:]
+    return stra
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
