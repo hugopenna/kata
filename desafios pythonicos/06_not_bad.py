@@ -8,11 +8,19 @@ por 'good' e retorne a string resultante.
 
 Exemplo: 'The dinner is not that bad!' retorna 'The dinner is good!'
 """
+# A função not_bad remove o trecho entre not e bad através do split da string 's' em strings menores
+# onde not e bad são removidos e a string desejada é concatenada novamente.
+# Como a função split retorna uma lista de strings, é feita a verificação se 'bad' aparece na string que esta na
+# segunda posição da lista list1[1]. O que valida que temos 'bad' depois de not.
+#  list2 retorna o split('bad') da string que contém bad, onde a primeira string é o conteúdo entre not e bad,
+# que é descartado e a segunda sting da lista é o conteúdo após bad e que precisa ser adicionado depois de 'good'.
 
 def not_bad(s):
-    # +++ SUA SOLUÇÃO +++
+    list1 = s.split("not")
+    if "bad" in list1[1]:
+        list2 = list1[1].split("bad")
+        s = list1[0] + "good" + list2[1]
     return s
-
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
