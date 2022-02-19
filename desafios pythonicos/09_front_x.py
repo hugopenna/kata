@@ -12,9 +12,17 @@ antes de combina-las.
 """
 
 def front_x(words):
-    # +++ SUA SOLUÇÃO +++
-    return
+    s_x, s_y = [],[]
+    for s in words:
+        if s[0] == 'x':
+            s_x.append(s)
+        else:
+            s_y.append(s)
+    s_x.sort(), s_y.sort()
+    return s_x + s_y
 
+# Eu tentei fazer com a funcção remove() já dentro do if acho que o for bugava e não corria todos os items da lista,
+# acho que por conta do remove mudar os itens de posição e o for funcionar como um contador simples.
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
