@@ -14,7 +14,7 @@ def linear_merge(list1, list2):
     list1 = sorted(list1)
     return list1
 
-# Aqui eu tenho minhas dúvidas se a funçào sorted() passa uma vez só por cada item.
+# Aqui eu tenho minhas dúvidas se a função sorted() passa uma vez só por cada item.
 # Mas de qualquer forma, ta passando nos testes.
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
