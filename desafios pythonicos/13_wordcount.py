@@ -56,7 +56,10 @@ import sys
 
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
+def print_words(filename):
+    l = open(filename).read().lower().split()
 
+    print(l)
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
 # parêtros do programa.
