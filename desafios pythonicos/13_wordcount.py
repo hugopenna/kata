@@ -57,9 +57,14 @@ import sys
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
 def print_words(filename):
+    d = {}
     l = open(filename).read().lower().split()
+    for i in l:
+        if i not in d:
+            d[i] = 1
+        else:
+            d[i] += 1
 
-    print(l)
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
 # parêtros do programa.
