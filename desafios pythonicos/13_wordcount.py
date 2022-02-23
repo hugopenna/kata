@@ -64,7 +64,9 @@ def print_words(filename):
             d[i] = 1
         else:
             d[i] += 1
-
+    list_key = sorted(list(d))
+    for i in list_key:
+        print( i, d[i])
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
 # parêtros do programa.
