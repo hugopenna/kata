@@ -67,6 +67,11 @@ def print_words(filename):
     list_key = sorted(list(d))
     for i in list_key:
         print( i, d[i])
+    return list_key
+
+def print_top(filename):
+    print_words(filename)
+    print(print_words().)
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
 # parêtros do programa.
