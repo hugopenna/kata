@@ -57,15 +57,14 @@ import sys
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
 def count_words(filename):
-    d = {}
+    d = dict()
     l = open(filename).read().lower().split()
     for i in l:
-        if i not in d:
-            d[i] = 1
-        else:
-            d[i] += 1
+        d.setdefault(i, 0)
+        d[i] += 1
     t = d.items()
     return t
+
 def print_words(filename):
     t = sorted(count_words(filename))
     for i in t:
