@@ -1,0 +1,12 @@
+# Hoje eu aprendi
+
+## O que eu estou fazendo: Desafios Pythonicos - wordcount
+
+## O que aprendi
+
+- setdefault dos dicionários é mara, fez meu código fica muito mais simples
+- se vc chama uma função dentro da outra, ela vai executar os prints daquela determinada função.
+
+## Ideias / Pensamentos
+- ler a documentação no metodo/função built-in pode te dar uma luz de como simplificar as coisas
+- existe sempre uma função built-in que simplifica as coisas
