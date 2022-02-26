@@ -56,7 +56,7 @@ import sys
 
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
-def print_words(filename):
+def count_words(filename):
     d = {}
     l = open(filename).read().lower().split()
     for i in l:
@@ -64,14 +64,19 @@ def print_words(filename):
             d[i] = 1
         else:
             d[i] += 1
-    list_key = sorted(list(d))
-    for i in list_key:
-        print( i, d[i])
-    return list_key
+    t = d.items()
+    return t
+def print_words(filename):
+    t = sorted(count_words(filename))
+    for i in t:
+        print(i[0], i[1])
 
 def print_top(filename):
-    print_words(filename)
-    print(print_words().)
+    a = sorted(count_words(filename), key=lambda t: t[-1], reverse=True)
+    for i in a:
+        print(i[0], i[1])
+
+
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
 # parêtros do programa.
