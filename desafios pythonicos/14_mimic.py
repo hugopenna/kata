@@ -46,7 +46,11 @@ import sys
 def mimic_dict(filename):
   """Retorna o dicionario imitador mapeando cada palavra para a lista de
   palavras subsequentes."""
-    # +++ SUA SOLUÇÃO +++
+  l = open(filename).read().lower().split()
+  d = dict()
+  for i in l:
+    d.setdefault(i, list())
+  print(d)
   return
 
 
