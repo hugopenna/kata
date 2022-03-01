@@ -47,14 +47,11 @@ def mimic_dict(filename):
   """Retorna o dicionario imitador mapeando cada palavra para a lista de
   palavras subsequentes."""
   l = open(filename).read().lower().split()
-  d = dict()
-  i = 0
-  while i < len(l)-1:
+  d = dict([('', l[0]),(l[-1],[''])])
+  for i in range(len(l)-1):
     d.setdefault(l[i], list())
     d[l[i]].append(l[i+1])
-    i+= 1
-  print(d)
-  return
+  return (d)
 
 
 def print_mimic(mimic_dict, word):
