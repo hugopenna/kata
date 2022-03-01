@@ -48,8 +48,11 @@ def mimic_dict(filename):
   palavras subsequentes."""
   l = open(filename).read().lower().split()
   d = dict()
-  for i in l:
-    d.setdefault(i, list())
+  i = 0
+  while i < len(l)-1:
+    d.setdefault(l[i], list())
+    d[l[i]].append(l[i+1])
+    i+= 1
   print(d)
   return
 
