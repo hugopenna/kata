@@ -1,0 +1,11 @@
+# Hoje eu aprendi
+
+## O que eu estou fazendo: Desafios pythonicos - mimic part 2
+
+## O que aprendi
+aprendi a manipular listas dentro de dicionários
+
+aprendi um pouco mais sobre a dinâmica do for, quando usamos um iterável qualquer ele não faz o laço de forma posicional, então se for um 'for i in lista' e a lista for composta por strings, não é possivel acessar o próximo item ou fazer qualquer tipo de manipulação da lista usando 'i' como referencia posicional.
+
+## Ideias / Pensamentos
+É bacana fazer os exercicios, mas as vezes da a sensação de pouco progresso, ainda não me sinto capaz de fazer muita coisa, mas sei lá, acho que no fim é mais uma questão de adiquirir auto confiança e ir fazendo as coisas que me derem na telha.
