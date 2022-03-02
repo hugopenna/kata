@@ -56,7 +56,12 @@ def mimic_dict(filename):
 
 def print_mimic(mimic_dict, word):
   """Dado o dicionario imitador e a palavra inicial, imprime texto de 200 palavras."""
-
+  mimic_list = ['']
+  mimic_str = ''
+  for i in range(200):
+    mimic_list.append(random.choice(mimic_dict[mimic_list[-1]]))
+    mimic_str += mimic_list[-1] + ' '
+  print(mimic_str)
   return
 
 
