@@ -7,7 +7,9 @@ e o último caracteres da cadeia são os mesmos.
 
 PS: Python não possui o operador ++, porém += funciona.
 """
+"""ATENÇÃO, lembre-se de comentar uma das soluções antes de rodar o código."""
 
+# solução 1, o famoso básico que funciona
 def match_ends(words):
     match_count = 0
     for s in words:
@@ -15,6 +17,9 @@ def match_ends(words):
             match_count += 1
     return match_count
 
+# solução 2, usando list comprehension
+def match_ends(words):
+    return len([s for s in words if len(s) > 1 and s[0] == s[-1]])
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
