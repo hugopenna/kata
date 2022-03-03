@@ -12,17 +12,21 @@ antes de combina-las.
 """
 
 def front_x(words):
-    s_x, s_y = [],[]
+    list_x, list_not_x = [],[]
+    words.sort()
     for s in words:
         if s[0] == 'x':
-            s_x.append(s)
+            list_x.append(s)
         else:
-            s_y.append(s)
-    s_x.sort(), s_y.sort()
-    return s_x + s_y
+            list_not_x.append(s)
+    return list_x + list_not_x
 
-# Eu tentei fazer com a funcção remove() já dentro do if acho que o for bugava e não corria todos os items da lista,
-# acho que por conta do remove mudar os itens de posição e o for funcionar como um contador simples.
+#def front_x(words):
+#    return sorted(words, key=lambda start_x: start_x if start_x[0] == 'x' else f'y{start_x}')
+"""
+Adicionei essa solução abaixo que encontrei, entendi o intuito mas o if/else me deixou um pouco confuso,
+depois de uns testes eu vi que no else 'y' na frete é para ordenar tudo que não passar na condição do if como se
+a primeira letra dessas palavras fosse y, mas ainda sim buguei."""
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
