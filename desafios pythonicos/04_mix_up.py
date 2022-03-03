@@ -13,8 +13,10 @@ Assuma que a e b tem tamanho 2 ou maior.
 """
 
 def mix_up(a, b):
-    stra = b[:2] + a[2:] + ' ' + a[:2] + b[2:]
-    return stra
+    if len(a) >=2 and len(b) >= 2:
+        return ' '.join([b[:2]+a[2:],a[:2]+b[2:]])
+    else:
+        return 'as strings devem ter tamanho 2 ou maior'
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
@@ -42,3 +44,5 @@ if __name__ == '__main__':
     test(mix_up, ('dog', 'dinner'), 'dig donner')
     test(mix_up, ('gnash', 'sport'), 'spash gnort')
     test(mix_up, ('pezzy', 'firm'), 'fizzy perm')
+    test(mix_up,('a','mix'), 'as strings devem ter tamanho 2 ou maior')
+    test(mix_up,('aa','bb'), 'bb aa')
