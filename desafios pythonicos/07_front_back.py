@@ -16,6 +16,13 @@ def front_back(a, b):
 
     return a[:half_a] + b[:half_b] + a[half_a:] + b[half_b:]
 
+# versão melhorada, extraindo o calculo da metade da string para outra função.
+
+def half_s(s):
+    return sum(divmod(len(s),2))
+def front_back(a, b):
+    return ''.join([a[:half_s(a)] + b[:half_s(b)], a[half_s(a):] + b[half_s(b):]])
+
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
 def test(f, in_, expected):
