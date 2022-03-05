@@ -59,6 +59,7 @@ import sys
 def count_words(filename):
     d = dict()
     l = open(filename).read().lower().split()
+
     for i in l:
         d.setdefault(i, 0)
         d[i] += 1
@@ -72,9 +73,12 @@ def print_words(filename):
 
 def print_top(filename):
     a = sorted(count_words(filename), key=lambda t: t[-1], reverse=True)
+    counter = 0
     for i in a:
         print(i[0], i[1])
-
+        counter += 1
+        if counter == 20:
+            break
 
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
